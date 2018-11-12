@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivial</title>
+    <link href="estil.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+</head>
+
+<body>
+    <div id="fons">
+
+        <!----------- Pantalla inicial benvinguda al jugador ----------->
+        <section id="benvinguda">
+            <div id=titol_trivial>
+                <h1>Trívial</h1>
+            </div>
+            <div id="explicacio_joc">
+                <h2>Benvingut! Respon 3 preguntes <br>correctament de cada categoria per guanyar!</h2>
+            </div>
+            <div id="explicació_categories">
+                <div class="categoria" id="categoria_historia"><img src="img/102_historia.svg" height="140px"></div>
+                <div class="categoria" id="categoria_tecnologia"><img src="img/103_tecnologia.svg" height="145px"></div>
+                <div class="categoria" id="categoria_geografia"><img src="img/104_geografia.svg" height="145px"></div>
+                <div class="categoria" id="categoria_art"><img src="img/105_art.svg" height="140px"></div>
+                <div class="categoria" id="categoria_ciencia"><img src="img/106_ciencia.svg" height="140px"></div>
+            </div>
+            <div id="boto_jugar" class="clicable">
+                <img src="img/107_botojugar.svg" height="80px">
+            </div>
+            <div id="boto_credits" class="clicable">
+                <img src="img/002_credits.svg" height="45px">
+            </div>
+        </section>
+
+        <!----------- Pantalla de crèdits ----------->
+        <section id="credits">
+            <div id=titol_credits>
+                <img src="img/501_titolCredits.svg" height="50px">
+            </div>
+            <div id="noms">
+                <a href="http://davidmonje.com/" target="_blank">
+                    <h2>David Monje Navidad</h2>
+                </a>
+                <a href="https://santicros.github.io/" target="_blank">
+                    <h2>Santi Cros Creus</h2>
+                </a>
+            </div>
+            <div id="boto_tornar" class="clicable">
+                <img src="img/416_tornar.svg" height="40px">
+            </div>
+        </section>
+
+        <!----------- Pantalla de triar categories automàticament ----------->
+        <section id="categories">
+            <div id="titol_categoria">
+                <img src="img/201_categoria.svg" height="50px">
+            </div>
+            <div id="requadre_categories">
+                <img src="img/202_requadre.svg" width="230px">
+            </div>
+            <div id="boto_girar" class="start clicable ">
+                <img src="img/203_girar.svg" height="65px">
+            </div>
+
+            <div id="imatge_inici_ruleta"><img src="img/204_historia.svg" height="223px" /></div>
+            <div id="ruleta">
+                <img src="img/ruleta.gif" height="224px" />
+            </div>
+
+        </section>
+
+        <!----------- Pantalla del joc amb les preguntes ----------->
+        <section id="joc">
+            <div id="boto_inici" class="clicable">
+                <img src="img/001_inici.svg" height="40px">
+            </div>
+
+            <div id="vides">
+                <img id="vida_1" src="img/312_vida.svg" width="40px">
+                <img id="vida_2" src="img/312_vida.svg" width="40px">
+                <img id="vida_3" src="img/312_vida.svg" width="40px">
+            </div>
+
+            <!----------- Splash pantalla correcta o incorrecta ----------->
+            <div id="splash">
+                <div id="splash_correcte"><img src="img/310_correcte.svg" width="1024px"></div>
+                <div id="splash_incorrecte"><img src="img/311_incorrecte.svg" width="1024px"></div>
+                <div id="splash_sortir">
+                    <img src="img/313_gris.svg" width="1024px">
+                    <div id="pregunta_sortir"><img src="img/314_pregunta_sortir.svg" width="700px"></div>
+                    <div id="boto_si" class="clicable"><img src="img/315_si.svg" width="100px"></div>
+                    <div id="boto_no" class="clicable"><img src="img/316_no.svg" width="100px"></div>
+                </div>
+            </div>
+
+            <!----------- Seccions del joc ----------->
+            <div id="seccions_jocs">
+                <section id=seccio_historia>
+                    <div id="header_historia">
+                        <img src="img/304_historia.svg">
+                    </div>
+                </section>
+                <section id=seccio_tecnologia>
+                    <div id="header_tecnologia">
+                        <img src="img/305_tecnologia.svg">
+                    </div>
+                </section>
+                <section id=seccio_geografia>
+                    <div id="header_geografia">
+                        <img src="img/303_geografia.svg">
+                    </div>
+                </section>
+                <section id=seccio_art>
+                    <div id="header_art">
+                        <img src="img/302_art.svg">
+                    </div>
+                </section>
+                <section id=seccio_ciencia>
+                    <div id="header_ciencia">
+                        <img src="img/301_ciencia.svg">
+                    </div>
+                </section>
+            </div>
+
+            <div id="preguntesjs"> </div>
+
+            <!----------- Disseny preguntes en HTML ---------
+            
+                <div id="pregunta">
+                    <img src="img/306_pregunta.svg" width="925px">
+                    <div id="div_pregunta">
+                        <h2 id="text_pregunta">Aquesta és una pregunta èpica que ningú sabrà respondre. Muahahaha</h2>
+                    </div>
+                </div>
+
+                <div id="respostes">
+                    <div id="resposta1" class="resposta clicable">
+                        <h2 class="resposta">Primera resposta</h2>
+                        <img class="" src="img/307_resposta.svg" width="370px">
+                    </div>
+                    <div id="resposta2" class="resposta clicable">
+                        <h2 class="resposta">Segona resposta</h2>
+                        <img class="correcta" src="img/307_resposta.svg" width="370px">
+                    </div>
+                    <div id="resposta3" class="resposta clicable">
+                        <h2 class="resposta">Tercera resposta</h2>
+                        <img class="incorrecta" src="img/307_resposta.svg" width="370px">
+                    </div>
+                    <div id="resposta4" class="resposta clicable">
+                        <h2 class="resposta">Quarta resposta</h2>
+                        <img class="" src="img/307_resposta.svg" width="370px">
+                    </div>
+                </div>
+            -->
+        </section>
+
+        <!----------- Pantalla de puntuacions ----------->
+        <section id="puntuacions">
+            <div id=titol_puntuacions>
+                <img src="img/401_puntuacions.svg" height="50px">
+            </div>
+            <div id="boto_continuar" class="clicable">
+                <img src="img/417_continuar.svg" height="50px">
+            </div>
+
+            <div class="medalles">
+                <section>
+                    <div><img id="medalla_historia_1" src="img/402_icoHistoria.svg" width="44px"></div>
+                    <div><img id="medalla_historia_2" src="img/402_icoHistoria.svg" width="44px"></div>
+                    <div><img id="medalla_historia_3" src="img/402_icoHistoria.svg" width="44px"></div>
+                </section>
+                <section>
+                    <div><img id="medalla_tecnologia_1" src="img/405_icoTecnologia.svg" width="45px"></div>
+                    <div><img id="medalla_tecnologia_2" src="img/405_icoTecnologia.svg" width="45px"></div>
+                    <div><img id="medalla_tecnologia_3" src="img/405_icoTecnologia.svg" width="45px"></div>
+                </section>
+                <section>
+                    <div><img id="medalla_geografia_1" src="img/408_icoGeografia.svg" width="45px"></div>
+                    <div><img id="medalla_geografia_2" src="img/408_icoGeografia.svg" width="45px"></div>
+                    <div><img id="medalla_geografia_3" src="img/408_icoGeografia.svg" width="45px"></div>
+                </section>
+                <section>
+                    <div><img id="medalla_art_1" src="img/411_icoArt.svg" width="45px"></div>
+                    <div><img id="medalla_art_2" src="img/411_icoArt.svg" width="45px"></div>
+                    <div><img id="medalla_art_3" src="img/411_icoArt.svg" width="45px"></div>
+                </section>
+                <section>
+                    <div><img id="medalla_ciencia_1" src="img/414_icoCiencia.svg" width="45px"></div>
+                    <div><img id="medalla_ciencia_2" src="img/414_icoCiencia.svg" width="45px"></div>
+                    <div><img id="medalla_ciencia_3" src="img/414_icoCiencia.svg" width="45px"></div>
+                </section>
+            </div>
+
+            <div id="categories_puntuacions">
+                <div><img src="img/401_historia.svg" width="810px"></div>
+                <div><img src="img/404_tecnologia.svg" width="810px"></div>
+                <div><img src="img/407_geografia.svg" width="810px"></div>
+                <div><img src="img/410_art.svg" width="810px"></div>
+                <div><img src="img/413_ciencia.svg" width="810px"></div>
+            </div>
+        </section>
+
+
+        <!----------- Pantalla final game over ----------->
+        <section id="final">
+            <div>
+                <h1>Game over</h1>
+                <h2 id="text_final">Has perdut! Vols tornar a jugar??</h2>
+                <div id="boto_si_final" class="clicable"><img src="img/315_si.svg" width="100px"></div>
+                <div id="boto_no_final" class="clicable"><img src="img/316_no.svg" width="100px"></div>
+            </div>
+        </section>
+
+        <!----------- Pantalla guanyador del joc ----------->
+        <section>
+            <div id="guanyat">
+                <img src="img/600_bg_blanc.svg" width="1024px">
+                <div id="titol_guanyat"><img src="img/601_banner_guanyat.svg" width="700px"></div>
+                <h2 id="text_guanyat">Vols tornar a jugar?</h2>
+                <div id="boto_si_guanyat" class="clicable"><img src="img/602_boto_si.svg" width="100px"></div>
+                <div id="boto_no_guanyat" class="clicable"><img src="img/603_boto_no.svg" width="100px"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+/* ------------------------- SECCIONS ------------------------- */
+
+#benvinguda {
+    display: ;
+}
+
+#categories {
+    display: none;
+}
+
+#joc {
+    display: none;
+}
+
+#puntuacions {
+    display: none;
+}
+
+#credits {
+    display: none;
+}
+
+#final {
+    display: none;
+}
+
+#guanyat {
+    display: none;
+}
+
+
+/* -------------------------- GENERAL -------------------------- */
+
+body {
+    background-color: #0D1A1E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fons {
+    border: 12px solid white;
+    position: relative;
+    height: 768px;
+    width: 1024px;
+    background-color: #13252C;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 4em;
+    font-weight: 500;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: white;
+}
+
+
+/* Qualsevol element que sigui clicable */
+
+.clicable {
+    cursor: pointer;
+}
+
+.clicable:active {
+    transform: translateY(3px);
+}
+
+
+/* Botons */
+
+#boto_inici,
+#boto_tornar,
+#boto_credits,
+#boto_continuar {
+    position: absolute;
+    bottom: 20px;
+}
+
+#boto_inici,
+#boto_tornar,
+#boto_continuar {
+    right: 30px;
+}
+
+
+/* -------------------- PANTALLA BENVINGUDA -------------------- */
+
+#titol_trivial {
+    margin-top: 70px;
+}
+
+#boto_credits {
+    left: 448px;
+}
+
+.categoria {
+    position: absolute;
+    margin-left: 60px;
+    top: 45%;
+    pointer-events: none;
+}
+
+#categoria_historia {
+    left: 7%;
+}
+
+#categoria_tecnologia {
+    left: 21%;
+}
+
+#categoria_geografia {
+    left: 38%;
+}
+
+#categoria_art {
+    left: 55%;
+}
+
+#categoria_ciencia {
+    left: 70%;
+}
+
+#boto_jugar {
+    position: absolute;
+    top: 550px;
+    left: 400px;
+}
+
+
+/* -------------------- PANTALLA CATEGORIES -------------------- */
+
+#titol_categoria {
+    position: absolute;
+    top: 80px;
+    left: 370px;
+}
+
+#requadre_categories {
+    position: absolute;
+    top: 250px;
+    left: 380px;
+    z-index: 3;
+}
+
+#boto_girar {
+    position: absolute;
+    bottom: 150px;
+    left: 405px;
+}
+
+#imatge_inici_ruleta {
+    position: absolute;
+    left: 383px;
+    top: 253px;
+    z-index: 2;
+}
+
+#ruleta {
+    position: absolute;
+    left: 383px;
+    top: 253px;
+    z-index: 1;
+    display: none;
+}
+
+
+/* ----------------------- PANTALLA JOC ----------------------- */
+
+
+/*** Seccions ***/
+
+#seccio_historia {
+    display: none;
+}
+
+#seccio_tecnologia {
+    display: none;
+}
+
+#seccio_geografia {
+    display: none;
+}
+
+#seccio_art {
+    display: none;
+}
+
+#seccio_ciencia {
+    display: none;
+}
+
+
+/*** Vides ***/
+
+#vides {
+    position: absolute;
+    top: 40px;
+    right: 45px;
+}
+
+#vides img {
+    padding-left: 5px;
+}
+
+
+/*** Preguntes i respostes ***/
+
+#pregunta {
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+#div_pregunta {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 180px;
+    left: 50px;
+    right: 50px;
+}
+
+#pregunta h2 {
+    color: #13252C;
+    font-weight: 400;
+}
+
+#respostes {
+    margin-left: 105px;
+}
+
+.resposta {
+    position: relative;
+    padding: 15px;
+    display: inline-block;
+}
+
+.resposta img {
+    width: 370px;
+    z-index: 1;
+}
+
+.resposta h2 {
+    color: #13252C;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+.correcta img {
+    content: url(img/308_respostaCorrecta.svg);
+}
+
+.incorrecta img {
+    content: url(img/309_respostaIncorrecta.svg);
+}
+
+.text_pregunta {
+    color: #13252C;
+    font-weight: 400;
+    margin: 20px;
+    margin-top: 40px;
+    background-image: url("img/306_pregunta.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 55px;
+}
+
+
+/*** Pantalles splash ***/
+
+#splash {
+    position: absolute;
+    z-index: 10;
+}
+
+#splash_correcte {
+    display: none;
+}
+
+#splash_incorrecte {
+    display: none;
+}
+
+#splash_sortir {
+    display: none;
+}
+
+#splash_sortir div {
+    position: absolute;
+}
+
+#pregunta_sortir {
+    top: 150px;
+    left: 165px;
+}
+
+#boto_si,
+#boto_no {
+    position: absolute;
+    top: 350px;
+}
+
+#boto_si {
+    left: 330px;
+}
+
+#boto_no {
+    right: 330px;
+}
+
+
+/* -------------------- PANTALLA PUNTUACIÓ -------------------- */
+
+#titol_puntuacions {
+    position: absolute;
+    top: 65px;
+    left: 300px;
+}
+
+#categories_puntuacions {
+    margin-left: 105px;
+    margin-top: 170px;
+}
+
+#categories_puntuacions div {
+    padding-bottom: 10px;
+}
+
+.medalles {
+    position: absolute;
+    left: 400px;
+    top: 184px;
+}
+
+.medalles div {
+    display: inline-block;
+    padding-bottom: 57px;
+    padding-right: 120px;
+}
+
+.plena_historia {
+    content: url(img/403_icoHistoria_ple.svg);
+}
+
+.plena_tecnologia {
+    content: url(img/406_icoTecnologia_ple.svg);
+}
+
+.plena_geografia {
+    content: url(img/409_icoGeografia_ple.svg);
+}
+
+.plena_art {
+    content: url(img/412_icoArt_ple.svg);
+}
+
+.plena_ciencia {
+    content: url(img/415_icoCiencia_ple.svg);
+}
+
+
+/* -------------------- PANTALLA GAME OVER -------------------- */
+
+#text_final {
+    margin-top: 100px;
+}
+
+#boto_si_final,
+#boto_no_final {
+    position: absolute;
+    top: 350px;
+}
+
+#boto_si_final {
+    left: 330px;
+}
+
+#boto_no_final {
+    right: 330px;
+}
+
+
+/* -------------------- PANTALLA HAS GUANYAT -------------------- */
+
+#guanyat div {
+    position: absolute;
+}
+
+#guanyat img {
+    position: absolute;
+    opacity: 0.98;
+    top: 0;
+}
+
+#titol_guanyat {
+    top: 150px;
+    left: 165px;
+}
+
+#text_guanyat {
+    color: #13252C;
+    font-weight: 400;
+    position: absolute;
+    top: 320px;
+    left: 365px;
+}
+
+#boto_si_guanyat,
+#boto_no_guanyat {
+    position: absolute;
+    top: 430px;
+}
+
+#boto_si_guanyat {
+    left: 330px;
+}
+
+#boto_no_guanyat {
+    right: 430px;
+}
+
+
+/* -------------------- PANTALLA CRÈDITS -------------------- */
+
+#titol_credits {
+    position: absolute;
+    top: 80px;
+    left: 400px;
+}
+
+#noms {
+    align-content: center;
+    margin-top: 330px;
+    text-align: center;
+}
+
+#noms h2:hover {
+    color: #FF6F27;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+#noms h2 {
+    line-height: 2em;
+}
